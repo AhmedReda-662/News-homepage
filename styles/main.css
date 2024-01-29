@@ -1,0 +1,303 @@
+/* Start Global Ruels*/
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+/* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: hsl(35, 77%, 62%);
+}
+/* Start Variable */
+
+/* End Variable */
+body {
+    font-family: inter;
+    background-color: hsl(36, 100%, 99%);
+    position: relative;
+    overflow-x: hidden;
+}
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.523);
+}
+ul {
+    list-style-type: none;
+}
+
+.container {
+    padding: 0px 15px;
+    margin: 0px auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .conatiner {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* Fix White Space Problem  */
+@media only screen and (max-width:768px) {
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+/* ===== Start Header ===== */
+header {
+    padding-top: 50px;
+}
+nav > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav > .container > img {
+    max-width: 100%;
+}
+nav > .container > .desktop-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+
+nav > .container > .desktop-list > li > a { 
+    display: block;
+    padding: 20px;
+    color: hsl(236, 13%, 42%);
+    text-decoration: none;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+}
+nav > .container > .desktop-list > li > a:hover {
+    color: hsl(35, 77%, 62%);
+}
+
+
+@media (min-width: 767px) {
+    nav > .container > .burger-icon {
+        display: none;
+    }
+    nav > .container > ul > img {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    nav > .container > .burger-icon {
+        display: block;
+    }
+    nav .container > ul > img {
+        position: absolute;
+        top: 50px;
+        right: 30px;
+    }
+    nav .container > ul {
+        flex-direction: column;
+        justify-content: center !important;
+        position: fixed;
+        right: -200px;
+        top: 0px;
+        background-color: hsl(36, 100%, 99%);
+        width: 200px;
+        height: 100%;
+        transition: right 0.5s;
+        -webkit-transition: right 0.5s;
+        -moz-transition: right 0.5s;
+        -ms-transition: right 0.5s;
+        -o-transition: right 0.5s;
+}
+    nav .container > ul.active {
+        right: 0px;
+    }
+}
+/* ===== End Header ===== */
+/* ===== Start News ===== */
+main {
+    padding-top: 50px;
+}
+main > .container {
+    display: flex;
+    gap: 30px;
+}
+main > .container > .left-section , 
+main > .conatiner > .right-section {
+    flex-basis: 100%;
+}
+main > .container > .left-section img{
+    max-width: 100%;
+}
+main > .container > .left-section .holder {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+main > .container > .left-section .holder > h2 {
+    font-size: 40px;
+    font-weight: 800;
+}
+@media (max-width : 991px) {
+    main > .container > .left-section .holder > h2 {
+        font-size: 30px;
+    }
+}
+main > .container > .left-section .holder > .text > p{
+    font-size: 15px;
+    line-height: 1.6;
+    color: hsl(236, 13%, 42%);
+    margin-bottom: 30px;
+}
+main > .container > .left-section .holder > .text > a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: hsl(5, 85%, 63%);
+    width: fit-content;
+    padding: 15px 30px;
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+}
+main > .container > .left-section .holder > .text > a:hover {
+    background-color: hsl(240, 100%, 5%);
+}
+@media (max-width:767px) {
+    main > .container {
+        flex-wrap: wrap;
+    }
+    main > .container > .left-section .holder {
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+    main > .container > .left-section .holder h2 ,
+    main > .container > .left-section .holder .text {
+        flex-basis: 100%;
+    }
+    main > .container > .left-section .holder > .text > p {
+        margin: 20px 0px;
+    }
+}
+main > .container > .right-section {
+    background-color: hsl(240, 100%, 5%);
+    padding: 30px 30px 30px 30px;
+}
+main > .container > .right-section > h2 {
+    color: hsl(35, 77%, 62%);
+}
+
+main > .container > .right-section > .news > h3 {
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    cursor: pointer;
+}
+main > .container > .right-section > .news > h3:hover {
+    color: hsl(35, 77%, 62%);
+}
+main > .container > .right-section > .news > p {
+    font-size: 15px;
+    color: hsl(233, 8%, 79%);
+    padding-top: 10px;
+    line-height: 1.6;
+}
+main > .container > .right-section > .news:not(:last-child) {
+    border-bottom: 1px solid hsl(233, 8%, 79%);
+    padding: 30px 0px;
+}
+main > .container > .right-section > .news:last-child {
+    padding-top: 30px;
+}
+/* ===== End News ===== */
+
+/* ===== Start Footer Section ===== */
+footer {
+    padding: 75px 0px;
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+footer .container .box > img {
+    max-width: 100%;
+    height: 110px;
+}
+footer .container .box {
+    display: flex;
+}
+footer .container .box .text {
+    margin-left: 30px;
+}
+footer .container .box .text p:first-child {
+    font-weight: bold;
+    font-size: 30px;
+    color: hsl(233, 8%, 79%);
+}
+footer .container .box .text h1 {
+    font-size: 15px;
+    font-weight: bolder;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    cursor: pointer;
+}
+footer .container .box .text h1:hover {
+    color: hsl(5, 85%, 63%);
+}
+footer .container .box .text p:last-child {
+    font-size: 12px;
+    color: hsl(236, 13%, 42%);
+    max-width: 220px;
+}
+@media (max-width:767px) {
+    footer .container {
+        flex-wrap: wrap;
+    }
+    footer .container .box {
+        margin-bottom: 30px;
+    }
+}
+/* ===== End Footer Section ===== */
